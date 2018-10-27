@@ -22,7 +22,6 @@ CREATE TABLE "Factura" (
     "PlacaCarreta" TEXT NULL
     "CodigoConductor" TEXT NULL
     "Origen" TEXT NULL
-    "Celular" TEXT NULL
     "FechaSalida" TEXT NULL
     "Destino" TEXT NULL
     "FechaDestino" TEXT NULL

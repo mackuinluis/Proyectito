@@ -53,6 +53,8 @@ namespace demomvc.Controllers
             return View(usuario);
         }
 
+        
+
         // GET: Usuarios/Login
         public IActionResult Login()
         {
@@ -84,25 +86,18 @@ namespace demomvc.Controllers
             return View();
         }
 
-        public IActionResult RegistrarFactura()
-        {
-            return View();
-        }
+       
 
         public IActionResult VerFactura()
         {
             return View();
         }
 
-         public async Task<IActionResult> RegistrarFactura([Bind("CodigoFactura","PlacaTracto","PlacaCarreta","CodigoConductor","Origen","FechaSalida","Destino","FechaDestino","CodigoCarga","FechaEntregaDocumento","MontoFacturado","Estado","FechaCobrado")] Usuario usuario)
+         
+
+         public IActionResult RegistrarFactura()
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Login");
-            }
-            return View(usuario);
+            return View();
         }
     }
 }
