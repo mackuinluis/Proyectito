@@ -94,7 +94,7 @@ namespace demomvc.Controllers
             return View();
         }
 
-         public async Task<IActionResult> RegistrarFactura([Bind("CodigoFactura","PlacaTracto","PlacaCarreta","CodigoConductor","Origen","FechaSalida","Destino","FechaDestino")] Usuario usuario)
+         public async Task<IActionResult> RegistrarFactura([Bind("CodigoFactura","PlacaTracto","PlacaCarreta","CodigoConductor","Origen","FechaSalida","Destino","FechaDestino","CodigoCarga","FechaEntregaDocumento","MontoFacturado","Estado","FechaCobrado")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
