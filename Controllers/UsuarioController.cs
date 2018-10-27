@@ -93,6 +93,17 @@ namespace demomvc.Controllers
         {
             return View();
         }
+
+         public async Task<IActionResult> RegistrarFactura([Bind("CodigoFactura","PlacaTracto","PlacaCarreta","CodigoConductor","Origen","FechaSalida","Destino","FechaDestino")] Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(usuario);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Login");
+            }
+            return View(usuario);
+        }
     }
 }
 
