@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using demomvc.Models;
-//using MySql.Data.EntityFrameworkCore.Extensions;
+using MySql.Data.EntityFrameworkCore.Extensions;
 
 
 namespace demomvc
@@ -27,8 +27,8 @@ namespace demomvc
         {
             services.AddMvc();
             services.AddDbContext<MvcContext>(options =>
-                  options.UseSqlite("Data Source=MvcMovie.db")
-                  //options.UseMySQL("server=localhost;database=library3;user=root;password=MySQL;port=3306")
+                  //options.UseSqlite("Data Source=MvcMovie.db")
+                  options.UseMySQL("server=localhost;database=library3;user=root;password=MySQL;port=3306")
 
                   );            
         }

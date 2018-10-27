@@ -9,6 +9,7 @@ namespace demomvc.Models
         {
         }
 
-        public DbSet<demomvc.Models.Student> Student { get; set; }
+        public DbSet<demomvc.Models.Usuario> Usuario { get; set; }
+        public DbSet<demomvc.Models.Factura> Factura { get; set; }
     }
 }
