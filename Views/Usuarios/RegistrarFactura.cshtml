@@ -15,37 +15,37 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
-                <label asp-for="CodigoFactura" class="control-label"></label>
+                <label asp-for="CodigoFactura" class="control-label">Código de la Factua: </label>
                 <input asp-for="CodigoFactura" class="form-control" />
                 <span asp-validation-for="CodigoFactura" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PlacaTracto" class="control-label"></label>
+                <label asp-for="PlacaTracto" class="control-label">Placa del Tracto</label>
                 <input asp-for="PlacaTracto" class="form-control" />
                 <span asp-validation-for="PlacaTracto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PlacaCarreta" class="control-label"></label>
+                <label asp-for="PlacaCarreta" class="control-label">Placa de la Carreta</label>
                 <input asp-for="PlacaCarreta" class="form-control" />
                 <span asp-validation-for="PlacaCarreta" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CodigoConductor" class="control-label"></label>
+                <label asp-for="CodigoConductor" class="control-label">Codigo del Conductor</label>
                 <input asp-for="CodigoConductor" class="form-control" />
                 <span asp-validation-for="CodigoConductor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Origen" class="control-label"></label>
+                <label asp-for="Origen" class="control-label">Origen del Transporte</label>
                 <input asp-for="Origen" class="form-control" />
                 <span asp-validation-for="Origen" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FechaSalida" class="control-label"></label>
+                <label asp-for="FechaSalida" class="control-label">Fecha de Salida:</label>
                 <input asp-for="FechaSalida" class="form-control" />
                 <span asp-validation-for="FechaSalida" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Destino" class="control-label"></label>
+                <label asp-for="Destino" class="control-label">Destino del Transporte: </label>
                 <input asp-for="Destino" class="form-control" />
                 <span asp-validation-for="Destino" class="text-danger"></span>
             </div>
@@ -55,45 +55,45 @@
                 <span asp-validation-for="FechaDestino" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CodigoCarga" class="control-label"></label>
+                <label asp-for="CodigoCarga" class="control-label">Codigo de la Carga: </label>
                 <input asp-for="CodigoCarga" class="form-control" />
                 <span asp-validation-for="CodigoCarga" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FechaEntregaDocumento" class="control-label"></label>
+                <label asp-for="FechaEntregaDocumento" class="control-label">Fecha de Documentos Entregados: </label>
                 <input asp-for="FechaEntregaDocumento" class="form-control" />
                 <span asp-validation-for="FechaEntregaDocumento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MontoFacturado" class="control-label"></label>
+                <label asp-for="MontoFacturado" class="control-label">Monto Facturado: </label>
                 <input asp-for="MontoFacturado" class="form-control" />
                 <span asp-validation-for="MontoFacturado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Estado" class="control-label"></label>
+                <label asp-for="Estado" class="control-label">Estado :</label>
                 <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="FechaEntregaDocumento" class="text-danger"></span>
+                <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FechaCobrado" class="control-label"></label>
+                <label asp-for="FechaCobrado" class="control-label">Fecha Que fue Cobrado:</label>
                 <input asp-for="FechaCobrado" class="form-control" />
                 <span asp-validation-for="FechaCobrado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MontoCobrado" class="control-label"></label>
+                <label asp-for="MontoCobrado" class="control-label">Monto Cobrado:</label>
                 <input asp-for="MontoCobrado" class="form-control" />
                 <span asp-validation-for="MontoCobrado" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Registrar" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Login">Volver</a>
+    <a asp-action="Empresa">Volver</a>
 </div>
 
 @section Scripts {
