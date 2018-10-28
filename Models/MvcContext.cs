@@ -11,5 +11,6 @@ namespace demomvc.Models
 
         public DbSet<demomvc.Models.Usuario> Usuario { get; set; }
         public DbSet<demomvc.Models.Factura> Factura { get; set; }
+        public DbSet<demomvc.Models.Conductor> Conductor { get; set; }
     }
 }

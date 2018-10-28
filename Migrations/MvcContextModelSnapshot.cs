@@ -18,6 +18,20 @@ namespace demomvc.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
+            modelBuilder.Entity("demomvc.Models.Conductor", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Licencia");
+
+                    b.Property<string>("Usuario");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Conductor");
+                });
+
             modelBuilder.Entity("demomvc.Models.Factura", b =>
                 {
                     b.Property<int>("ID")

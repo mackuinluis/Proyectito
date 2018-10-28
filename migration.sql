@@ -16,7 +16,7 @@ CREATE TABLE "Usuario" (
 );
 
 CREATE TABLE "Factura" (
-    "Id" TEXT NOT NULL CONSTRAINT "PK_Usuario" PRIMARY KEY,
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Factura" PRIMARY KEY,
     "CodigoFactura" TEXT NULL
     "PlacaTracto" TEXT NULL
     "PlacaCarreta" TEXT NULL
@@ -25,12 +25,18 @@ CREATE TABLE "Factura" (
     "FechaSalida" TEXT NULL
     "Destino" TEXT NULL
     "FechaDestino" TEXT NULL
-    "codigoCarga" TEXT NULL
+    "CodigoCarga" TEXT NULL
     "FechaEntregaDocumento" TEXT NULL
     "MontoFacturado" TEXT NULL
     "Estado" TEXT NULL
     "FechaCobrado" TEXT NULL
     "MontoCobrado" TEXT NULL
+);
+
+CREATE TABLE "Conductor" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Conductor" PRIMARY KEY,
+    "Usuario" TEXT NULL
+    "Licencia" TEXT NULL 
 );
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")

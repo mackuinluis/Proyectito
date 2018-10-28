@@ -19,8 +19,7 @@ namespace demomvc.Controllers
             _context = context;
         }
 
-        // GET: usuarios
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Usuarios(string searchString)
         {
              var usuarios = from m in _context.Usuario
                  select m;
@@ -31,73 +30,6 @@ namespace demomvc.Controllers
             }
             
             return View(await usuarios.ToListAsync());
-        }
-
-        // GET: Usuarios/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Usuarios/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nombre","Apellidos","Usu","Contraseña","ConfirmarContraseña","Correo","Celular","Nacimiento")] Usuario usuario)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Login");
-            }
-            return View(usuario);
-        }
-
-        
-
-        // GET: Usuarios/Login
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult Perfil()
-        {
-            return View();
-        }
-
-        public IActionResult Empresa()
-        {
-            return View();
-        }
-
-        public IActionResult VerEmpresa()
-        {
-            return View();
-        }
-
-        public IActionResult ModificarFactura()
-        {
-            return View();
-        }
-        
-        public IActionResult EliminarFactura()
-        {
-            return View();
-        }
-
-       
-
-        public IActionResult VerFactura()
-        {
-            return View();
-        }
-
-         
-
-         public IActionResult RegistrarFactura()
-        {
-            return View();
         }
     }
 }

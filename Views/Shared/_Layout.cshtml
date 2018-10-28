@@ -31,9 +31,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Usuarios" asp-action="Login">Cuenta</a></li
+
+                    <li><a asp-area="" asp-controller="Usuarios" asp-action="Usuarios">Usuarios</a></li>
+                    <li><a asp-area="" asp-controller="Facturas" asp-action="Facturas">Facturas</a></li>
+                    <li><a asp-area="" asp-controller="Empresas" asp-action="Empresas">Empresas</a></li>
+                    <li><a asp-area="" asp-controller="Cuentas" asp-action="Login">Cuenta</a></li>
                 </ul>
             </div>
         </div>
@@ -42,7 +44,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2018 - demomvc</p>
+            <p>&copy; 2018 - Mackuin</p>
         </footer>
     </div>
 
