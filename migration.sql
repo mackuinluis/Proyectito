@@ -39,6 +39,16 @@ CREATE TABLE "Conductor" (
     "Licencia" TEXT NULL 
 );
 
+CREATE TABLE "Empresa" (
+    "Id" INT NOT NULL CONSTRAINT "PK_Empresa" PRIMARY KEY,
+    "Gerente" TEXT NOT NULL
+    "RUC" INT NOT NULL
+    "Nombre" TEXT NOT NULL
+    "Direccion" TEXT NOT NULL
+    "Celular" INT NULL
+    "Telefono" INT NULL
+    "Tipo" TEXT NOT NULL
+);
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20181010130110_InitialCreate', '2.0.3-rtm-10026');
 

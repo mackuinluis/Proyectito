@@ -14,16 +14,29 @@ namespace demomvc.Controllers
     {
         private readonly MvcContext _context;
 
+
+
         public EmpresasController(MvcContext context)
         {
             _context = context;
         }
 
+
+
         public IActionResult Empresa()
         {
             return View();
         }
-//Ultimos Cambios
+
+
+
+        public IActionResult RegistrarEmpresa()
+        
+        {
+            return View();
+        }
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RegistrarEmpresa([Bind("Gerente","RUC","Nombre","Direccion","Celular","Telefono","Tipo")] Empresa empresa)
@@ -36,14 +49,16 @@ namespace demomvc.Controllers
             }
             return View(empresa);
         }
+
+
         public async Task<IActionResult> Empresas(string searchString)
         {
-             var empresas = from q in _context.Factura
+             var empresas = from q in _context.Empresa
                  select q;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                empresas = empresas.Where(f => f.Nombre.Contains(searchString));
+                empresas = empresas.Where(e => e.Nombre.Contains(searchString));
             }
             
             return View(await empresas.ToListAsync());
