@@ -23,9 +23,30 @@ namespace demomvc.Controllers
         {
             return View();
         }
-        public IActionResult Empresas()
+//Ultimos Cambios
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RegistrarEmpresa([Bind("Gerente","RUC","Nombre","Direccion","Celular","Telefono","Tipo")] Empresa empresa)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                _context.Add(empresa);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Empresas");
+            }
+            return View(empresa);
+        }
+        public async Task<IActionResult> Empresas(string searchString)
+        {
+             var empresas = from q in _context.Factura
+                 select q;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                empresas = empresas.Where(f => f.Nombre.Contains(searchString));
+            }
+            
+            return View(await empresas.ToListAsync());
         }
     }
 }
