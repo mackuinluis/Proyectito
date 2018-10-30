@@ -1,8 +1,10 @@
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-namespace demomvc.Models{
-    public class Empresa{
+namespace demomvc.Models
+{
+    public class Empresa
+    {
         public int ID { get; set; }
         // [Compare(nameof(Usuario))] 
         public string Gerente { get; set; }

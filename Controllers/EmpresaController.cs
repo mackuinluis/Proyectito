@@ -20,17 +20,11 @@ namespace demomvc.Controllers
         {
             _context = context;
         }
+        
 
 
 
-        public IActionResult Empresa()
-        {
-            return View();
-        }
-
-
-
-        public IActionResult RegistrarEmpresa()
+        public IActionResult CrearEmpresa()
         
         {
             return View();
@@ -39,7 +33,7 @@ namespace demomvc.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RegistrarEmpresa([Bind("Gerente","RUC","Nombre","Direccion","Celular","Telefono","Tipo")] Empresa empresa)
+        public async Task<IActionResult> CrearEmpresa([Bind("Gerente","RUC","Nombre","Direccion","Celular","Telefono","Tipo")] Empresa empresa)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +56,10 @@ namespace demomvc.Controllers
             }
             
             return View(await empresas.ToListAsync());
+        }
+        public IActionResult Empresa()
+        {
+            return View();
         }
     }
 }

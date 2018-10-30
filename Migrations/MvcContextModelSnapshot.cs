@@ -32,6 +32,33 @@ namespace demomvc.Migrations
                     b.ToTable("Conductor");
                 });
 
+            modelBuilder.Entity("demomvc.Models.Empresa", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Celular");
+
+                    b.Property<string>("Direccion")
+                        .IsRequired();
+
+                    b.Property<string>("Gerente");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired();
+
+                    b.Property<int>("RUC");
+
+                    b.Property<int>("Telefono");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired();
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Empresa");
+                });
+
             modelBuilder.Entity("demomvc.Models.Factura", b =>
                 {
                     b.Property<int>("ID")
