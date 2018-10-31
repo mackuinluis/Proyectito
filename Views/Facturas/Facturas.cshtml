@@ -25,8 +25,50 @@
     <thead>
         <tr>
                 <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
                     @Html.DisplayNameFor(model => model.CodigoFactura)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlacaTracto)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PlacaCarreta)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodigoConductor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Origen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaSalida)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaDestino)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CodigoCarga)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaEntregaDocumento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MontoFacturado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FechaCobrado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MontoCobrado)
+                </th>        
             <th></th>
         </tr>
     </thead>
@@ -34,7 +76,49 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.CodigoFactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaTracto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaCarreta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoConductor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Origen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Destino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaDestino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoCarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEntregaDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoFacturado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCobrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoCobrado)
             </td>
             <td>
                 <a asp-action="Facturas" asp-route-id="@item.ID">Details</a> |
