@@ -45,14 +45,14 @@ namespace demomvc.Controllers
         }
 
 
-        public async Task<IActionResult> Empresas(string searchString)
+        public async Task<IActionResult> Empresas(string fTipo)
         {
              var empresas = from q in _context.Empresa
                  select q;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(fTipo))
             {
-                empresas = empresas.Where(e => e.Nombre.Contains(searchString));
+                empresas = empresas.Where(e => e.Tipo.Contains(fTipo));
             }
             
             return View(await empresas.ToListAsync());

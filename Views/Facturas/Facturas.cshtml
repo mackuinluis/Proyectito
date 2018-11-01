@@ -13,18 +13,31 @@
     <a class="btn btn-primary" href="EliminarFactura">ELIMINAR FACTURA</a>
 </center>
 <br><br>
-
+<div class="row">
 <form asp-controller="Facturas" asp-action="Facturas">
-        Origen: <input type="text" name="SearchString">
-        <input type="submit" value="Filtrar" />
-        Destino: <input type="text" name="fDestino">
-        <input type="submit" value="Filtrar" />
-        Conductor: <input type="text" name="fConductor">
-        <input type="submit" value="Filtrar" />
-        Carga: <input type="text" name="fCarga">
-        <input type="submit" value="Filtrar" />
+    <div class="col-sm-4">
+        Origen:<input type="text" name="SearchString">
+        <input class="btn btn-success" type="submit" value="Filtrar" />
+        <br>
+        Destino:<input type="text" name="fDestino">
+        <input  class="btn btn-success" type="submit" value="Filtrar" />
         
+    </div>
+    <div class="col-sm-4">
+        Conductor:<input type="text" name="fConductor">
+        <input class="btn btn-success" type="submit" value="Filtrar" />
+        <br>
+        Carga:<input type="text" name="fCarga">
+        <input  class="btn btn-success" type="submit" value="Filtrar" />
+    </div> 
+    <div class="col-sm-4"></div>
+        Estado:<input type="text" name="fEstado">
+        <input class="btn btn-success" type="submit" value="Filtrar" />
+        <br>
+        <a class="btn btn-danger" href="Facturas">Desfiltrar</a>
+    </div>
 </form>
+</div>
 
 <table class="table">
     <thead>
@@ -124,9 +137,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MontoCobrado)
-            </td>
-            <td>
-                <a asp-action="Facturas" asp-route-id="@item.ID">Details</a> |
             </td>
         </tr>
 }

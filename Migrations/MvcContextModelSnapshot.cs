@@ -68,7 +68,7 @@ namespace demomvc.Migrations
 
                     b.Property<int>("CodigoConductor");
 
-                    b.Property<int>("CodigoFactura");
+                    b.Property<string>("CodigoFactura");
 
                     b.Property<string>("Destino");
 
@@ -82,9 +82,9 @@ namespace demomvc.Migrations
 
                     b.Property<string>("FechaSalida");
 
-                    b.Property<int>("MontoCobrado");
+                    b.Property<double>("MontoCobrado");
 
-                    b.Property<int>("MontoFacturado");
+                    b.Property<double>("MontoFacturado");
 
                     b.Property<string>("Origen");
 
