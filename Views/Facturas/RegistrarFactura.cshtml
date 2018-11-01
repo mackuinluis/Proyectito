@@ -41,7 +41,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="FechaSalida" class="control-label">Fecha de Salida:</label>
-                <input asp-for="FechaSalida" class="form-control" />
+                <input asp-for="FechaSalida" type= "Date" class="form-control" />
                 <span asp-validation-for="FechaSalida" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -51,32 +51,35 @@
             </div>
             <div class="form-group">
                 <label asp-for="FechaDestino"  class="control-label">Fecha de LLegada:</label>
-                <input asp-for="FechaDestino"class="form-control" />
+                <input asp-for="FechaDestino" type= "Date" class="form-control" />
                 <span asp-validation-for="FechaDestino" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CodigoCarga" class="control-label">Codigo de la Carga: </label>
-                <input asp-for="CodigoCarga" class="form-control" />
+                <input asp-for="CodigoCarga"  class="form-control" />
                 <span asp-validation-for="CodigoCarga" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FechaEntregaDocumento" class="control-label">Fecha de Documentos Entregados: </label>
-                <input asp-for="FechaEntregaDocumento"  class="form-control" />
+                <input asp-for="FechaEntregaDocumento" type= "Date" class="form-control" />
                 <span asp-validation-for="FechaEntregaDocumento" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MontoFacturado" class="control-label">Monto Facturado: </label>
-                <input asp-for="MontoFacturado" class="form-control" />
+                <input asp-for="MontoFacturado"  type= "Date" class="form-control" />
                 <span asp-validation-for="MontoFacturado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label">Estado :</label>
-                <input asp-for="Estado" class="form-control" />
+                <select asp-for="Estado" class="form-control" >
+                    <option value="volvo">Pendiente</option>
+                    <option value="saab">Cancelado</option>
+                </select>
                 <span asp-validation-for="Estado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FechaCobrado" class="control-label">Fecha Que fue Cobrado:</label>
-                <input asp-for="FechaCobrado"  class="form-control" />
+                <input asp-for="FechaCobrado" type= "Date"  class="form-control" />
                 <span asp-validation-for="FechaCobrado" class="text-danger"></span>
             </div>
             <div class="form-group">
