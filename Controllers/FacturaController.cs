@@ -62,8 +62,9 @@ namespace demomvc.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                facturas = facturas.Where(f => f.CodigoFactura.Contains(searchString));
-            }
+                facturas = facturas.Where(f => f.Origen.Contains(searchString));
+            } 
+            
             
             return View(await facturas.ToListAsync());
         }

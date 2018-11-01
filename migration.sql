@@ -17,20 +17,20 @@ CREATE TABLE "Usuario" (
 
 CREATE TABLE "Factura" (
     "Id" TEXT NOT NULL CONSTRAINT "PK_Factura" PRIMARY KEY,
-    "CodigoFactura" TEXT NULL
+    "CodigoFactura" INT NULL
     "PlacaTracto" TEXT NULL
     "PlacaCarreta" TEXT NULL
-    "CodigoConductor" TEXT NULL
-    "Origen" TEXT NULL
+    "CodigoConductor" INT NULL
+    "Origen" TEXT NOT NULL
     "FechaSalida" TEXT NULL
-    "Destino" TEXT NULL
+    "Destino" TEXT NOT NULL
     "FechaDestino" TEXT NULL
-    "CodigoCarga" TEXT NULL
+    "CodigoCarga" INT NULL
     "FechaEntregaDocumento" TEXT NULL
-    "MontoFacturado" TEXT NULL
-    "Estado" TEXT NULL
+    "MontoFacturado" INT NULL
+    "Estado" TEXT  NULL
     "FechaCobrado" TEXT NULL
-    "MontoCobrado" TEXT NULL
+    "MontoCobrado" INT NULL
 );
 
 CREATE TABLE "Conductor" (
