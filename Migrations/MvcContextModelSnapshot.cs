@@ -102,15 +102,20 @@ namespace demomvc.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Apellidos");
+                    b.Property<string>("Apellidos")
+                        .IsRequired();
 
-                    b.Property<string>("Celular");
+                    b.Property<int>("Celular");
 
                     b.Property<string>("ConfirmarContraseña");
 
-                    b.Property<string>("Contraseña");
+                    b.Property<string>("ConfirmarCorreo");
 
-                    b.Property<string>("Correo");
+                    b.Property<string>("Contraseña")
+                        .IsRequired();
+
+                    b.Property<string>("Correo")
+                        .IsRequired();
 
                     b.Property<string>("Nacimiento");
 
@@ -118,7 +123,8 @@ namespace demomvc.Migrations
                         .IsRequired()
                         .HasMaxLength(40);
 
-                    b.Property<string>("Usu");
+                    b.Property<string>("Usu")
+                        .IsRequired();
 
                     b.HasKey("ID");
 

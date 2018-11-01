@@ -7,17 +7,23 @@ namespace demomvc.Models
     public class Usuario
     {
         public int ID { get; set; }
-        [Required(ErrorMessage = "Please enter last name")]
+        [Required(ErrorMessage = "Ingrese Nombre")]
 		[StringLength(40)]
         public string Nombre { get; set; }
+        [Required(ErrorMessage = "Ingrese Apellido")]
         public string Apellidos { get; set; }
+        [Required(ErrorMessage = "Ingrese Usuario")]
         public string Usu { get; set; }
-        
+        [Required(ErrorMessage = "Ingrese Contraseña")]
         public string Contraseña { get; set; }
-        [Compare(nameof(Contraseña))] 
+        [Compare(nameof(Contraseña),ErrorMessage = "Confirmación Incorrecta")] 
         public string ConfirmarContraseña { get; set;}
+        [Required(ErrorMessage = "Ingrese Correo")]
         public string Correo { get; set; }
-        public string Celular { get; set; }
+        [Compare(nameof(Correo),ErrorMessage = "Confirmación Incorrecta")] 
+        public string ConfirmarCorreo { get; set;}
+        [Required(ErrorMessage = "Ingrese Celular")]
+        public int Celular { get; set; }
         public string Nacimiento { get; set; }
     }
 }

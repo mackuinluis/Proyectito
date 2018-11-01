@@ -20,18 +20,7 @@ namespace demomvc.Controllers
         }
 
         // GET: usuarios
-        public async Task<IActionResult> Index(string searchString)
-        {
-             var usuarios = from m in _context.Usuario
-                 select m;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                usuarios = usuarios.Where(u => u.Nombre.Contains(searchString));
-            }
-            
-            return View(await usuarios.ToListAsync());
-        }
+        
 
         // GET: Usuarios/Create
         public IActionResult Create()
@@ -42,7 +31,7 @@ namespace demomvc.Controllers
         // POST: Usuarios/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nombre","Apellidos","Usu","Contraseña","ConfirmarContraseña","Correo","Celular","Nacimiento")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Nombre","Apellidos","Usu","Contraseña","ConfirmarContraseña","Correo","ConfirmarCorreo","Celular","Nacimiento")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
