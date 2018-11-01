@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Facturas</h2>
 
 <h4>Dependiendo el rol que cumpla tu usuario dentro de la empresa se visualizaran ciertos botones. </h4>
 <center>
@@ -15,10 +15,9 @@
 <br><br>
 
 <form asp-controller="Facturas" asp-action="Facturas">
-    <p>
-        Title: <input type="text" name="SearchString">
-        <input type="submit" value="Filter" />
-    </p>
+        Origen: <input type="text" name="SearchString">
+        <input type="submit" value="Filtrar" />
+        
 </form>
 
 <table class="table">
