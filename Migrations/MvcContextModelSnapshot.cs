@@ -64,13 +64,11 @@ namespace demomvc.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CodigoCarga");
+                    b.Property<int>("CodigoCarga");
 
-                    b.Property<string>("CodigoConductor");
+                    b.Property<int>("CodigoConductor");
 
-                    b.Property<string>("CodigoFactura")
-                        .IsRequired()
-                        .HasMaxLength(40);
+                    b.Property<int>("CodigoFactura");
 
                     b.Property<string>("Destino");
 
@@ -84,9 +82,9 @@ namespace demomvc.Migrations
 
                     b.Property<string>("FechaSalida");
 
-                    b.Property<string>("MontoCobrado");
+                    b.Property<int>("MontoCobrado");
 
-                    b.Property<string>("MontoFacturado");
+                    b.Property<int>("MontoFacturado");
 
                     b.Property<string>("Origen");
 
