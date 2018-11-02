@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
+//Creating class
 namespace demomvc.Models
 {
     public class Usuario
