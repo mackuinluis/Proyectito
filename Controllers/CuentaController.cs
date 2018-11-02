@@ -45,15 +45,41 @@ namespace demomvc.Controllers
         
 
         // GET: Usuarios/Login
-        public IActionResult Login()
+        
+
+public async Task<IActionResult> Login(string conectado)
         {
-            return View();
+             var usuarios = from m in _context.Usuario
+                 select m;
+
+            if (!String.IsNullOrEmpty(conectado))
+            {
+                usuarios = usuarios.Where(u => u.Usu.Contains(conectado));
+                Conservar(conectado);
+                return RedirectToAction("Perfil");
+            }
+            
+            return View(await usuarios.ToListAsync());
+        }
+        public async Task<IActionResult> Perfil(string conectado)
+        {
+            
+            var usuarios = from m in _context.Usuario
+                 select m;
+
+            Conservar(conectado);
+                usuarios = usuarios.Where(u => u.Usu.Contains(conectado));
+                
+           
+            
+            return View(await usuarios.ToListAsync());
+        }
+        
+        public void Conservar(string conectado){
+            string conservado=conectado;
+            
         }
 
-        public IActionResult Perfil()
-        {
-            return View();
-        }
         public IActionResult Conductor()
         {
             return View();

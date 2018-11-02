@@ -7,7 +7,7 @@
 <h2>Empresas</h2>
 
 <center>
-<a class="btn btn-primary" href="BuscarEmpresa" >BUSCAR UNA EMPRESA</a>
+
 <a class="btn btn-primary" href="CrearEmpresa">CREAR EMPRESA</a>
 <a class="btn btn-primary" href="Empresas">VER EMPRESA</a>
 </center>
@@ -22,39 +22,21 @@
 </form>
         <br><br>
 
-        
-
-
-
-
-<table class="table">
+<table class="table table-bordered table-hover">
     <thead>
         <tr>
+            
                 <th>
                     @Html.DisplayNameFor(model => model.ID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Gerente)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.RUC)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Nombre)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Direccion)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Celular)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Telefono)
-                </th>
-                <th>
                     @Html.DisplayNameFor(model => model.Tipo)
                 </th>
-            <th></th>
+                <th>PAGINA</th>
+            
         </tr>
     </thead>
     <tbody>
@@ -64,22 +46,7 @@
                 @Html.DisplayFor(modelItem => item.ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gerente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RUC)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Direccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo)

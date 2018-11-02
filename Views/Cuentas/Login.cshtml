@@ -1,3 +1,4 @@
+@model IEnumerable<demomvc.Models.Usuario>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,10 +19,11 @@
 				<span class="glyphicon glyphicon-user"></span>
 			</div>
 			<div class="ContentForm">
-				<form action="" method="post" name="FormEntrar">
+				<form asp-controller="Cuentas" asp-action="Perfil">
 					<div class="input-group input-group-lg">
 						<span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" class="form-control" name="correo" placeholder="Usuario" id="User" aria-describedby="sizing-addon1" required>
+						<input type="text "name="conectado" class="form-control"  placeholder="Usuario" id="User" aria-describedby="sizing-addon1" required>
+						
 					</div>
 					<br>
 					<div class="input-group input-group-lg">
@@ -37,6 +39,13 @@
 			</div>	
 		</div>
 	</body>
+
+	
+
+
+
+
+</table>
 	<!-- vinculando a libreria Jquery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Libreria java scritp de bootstrap -->
