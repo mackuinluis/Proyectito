@@ -10,8 +10,8 @@ using System;
 namespace demomvc.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    [Migration("20181027183007_m3")]
-    partial class m3
+    [Migration("20181103165405_db")]
+    partial class db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,18 +19,57 @@ namespace demomvc.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
+            modelBuilder.Entity("demomvc.Models.Conductor", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Licencia");
+
+                    b.Property<string>("Usuario");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Conductor");
+                });
+
+            modelBuilder.Entity("demomvc.Models.Empresa", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Celular");
+
+                    b.Property<string>("Direccion")
+                        .IsRequired();
+
+                    b.Property<string>("Gerente");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired();
+
+                    b.Property<int>("RUC");
+
+                    b.Property<int>("Telefono");
+
+                    b.Property<string>("Tipo")
+                        .IsRequired();
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Empresa");
+                });
+
             modelBuilder.Entity("demomvc.Models.Factura", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CodigoCarga");
+                    b.Property<int>("CodigoCarga");
 
-                    b.Property<string>("CodigoConductor");
+                    b.Property<int>("CodigoConductor");
 
-                    b.Property<string>("CodigoFactura")
-                        .IsRequired()
-                        .HasMaxLength(40);
+                    b.Property<string>("CodigoFactura");
 
                     b.Property<string>("Destino");
 
@@ -44,9 +83,9 @@ namespace demomvc.Migrations
 
                     b.Property<string>("FechaSalida");
 
-                    b.Property<string>("MontoCobrado");
+                    b.Property<double>("MontoCobrado");
 
-                    b.Property<string>("MontoFacturado");
+                    b.Property<double>("MontoFacturado");
 
                     b.Property<string>("Origen");
 
@@ -64,15 +103,20 @@ namespace demomvc.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Apellidos");
+                    b.Property<string>("Apellidos")
+                        .IsRequired();
 
-                    b.Property<string>("Celular");
+                    b.Property<int>("Celular");
 
                     b.Property<string>("ConfirmarContraseña");
 
-                    b.Property<string>("Contraseña");
+                    b.Property<string>("ConfirmarCorreo");
 
-                    b.Property<string>("Correo");
+                    b.Property<string>("Contraseña")
+                        .IsRequired();
+
+                    b.Property<string>("Correo")
+                        .IsRequired();
 
                     b.Property<string>("Nacimiento");
 
@@ -80,7 +124,8 @@ namespace demomvc.Migrations
                         .IsRequired()
                         .HasMaxLength(40);
 
-                    b.Property<string>("Usu");
+                    b.Property<string>("Usu")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
