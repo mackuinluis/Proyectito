@@ -120,5 +120,5 @@ INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo)
 VALUES (4,"Cristina Frend",65544,"ErssO SA","Psje. Las Cantulias 222",985620015,965112,
 "Transporte");
 
-Fecha nacimiento: <input type="date" name="cumpleanios" step="1" min="2013-01-01" max="2013-12-31" value="2013-01-01">
+
 
