@@ -14,11 +14,11 @@
 
 
 <form asp-controller="Facturas" asp-action="Facturas">
-        Tipo:<select  name="fTipo" >
+     Tipo:<select  name="fTipo" >
                     <option value="Transporte">Transporte</option>
                     <option value="Carga">Carga</option>
-                </select>
-        <a class="btn btn-danger" href="Facturas">Desfiltrar</a>
+        </select>
+    <a class="btn btn-danger" href="Facturas">Desfiltrar</a>
 </form>
         <br><br>
 
@@ -28,7 +28,6 @@
             
                 <th>
                     @Html.DisplayNameFor(model => model.ID)
-                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Nombre)
                 </th>
