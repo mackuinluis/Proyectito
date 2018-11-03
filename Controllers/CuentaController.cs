@@ -68,7 +68,7 @@ public async Task<IActionResult> Login(string conectado)
                  select m;
 
             Conservar(conectado);
-                usuarios = usuarios.Where(u => u.Usu.Contains(conectado));
+                usuarios = usuarios.Where(u => u.Usu.Equals(conectado));
                 
            
             
