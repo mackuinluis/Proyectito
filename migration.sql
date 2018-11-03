@@ -103,3 +103,20 @@ INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Co
 ,Celular,Nacimiento) 
 VALUES (4,"Fred","Duarte","FredD","fred123","fred123","fredduarte@outlook.es",
 "fredduarte@outlook.es",95444192,"08/02/1995");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (1,"Zacarias Vergara",74558,"Global SA","Av. Flora Tristan",97745877,4855788,
+"Carga");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (2,"Edwin Donaire",84557,"Carga SA","Av. Essde 123",985512456,856452,
+"Transporte");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (3,"Romulo Rassuri",98554,"Fideos SS","Calle Los Tulipanes 133",985623302,956215,
+"Carga");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (4,"Cristina Frend",65544,"ErssO SA","Psje. Las Cantulias 222",985620015,965112,
+"Transporte");
+
