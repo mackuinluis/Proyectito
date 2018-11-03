@@ -86,3 +86,20 @@ INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Co
 ,Celular,Nacimiento) 
 VALUES (1,"Cristopher","Espino","Overhaz","overhaz123","overhaz123","sonok_thp@outlook.es",
 "sonok_thp@outlook.es",953508892,"01/02/1999");
+
+
+INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Correo,ConfirmarCorreo
+,Celular,Nacimiento) 
+VALUES (2,"Luis Miguel","Saravia","Mackuin","mackuin123","mackuin123","luis_saravia1@usmp.pe",
+"luis_saravia1@usmp.pe",987445874,"04/03/1996");
+
+
+INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Correo,ConfirmarCorreo
+,Celular,Nacimiento) 
+VALUES (3,"Baneza","Porroa","BaneP","banep123","banep123","banezap@gmail.com",
+"banezap@gmai.com",98556558,"07/05/1996");
+
+INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Correo,ConfirmarCorreo
+,Celular,Nacimiento) 
+VALUES (4,"Fred","Duarte","FredD","fred123","fred123","fredduarte@outlook.es",
+"fredduarte@outlook.es",95444192,"08/02/1995");
