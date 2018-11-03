@@ -52,7 +52,11 @@
                 @Html.DisplayFor(modelItem => item.Tipo)
             </td>
             <td>
-                <a asp-action="Empresas" asp-route-id="@item.ID">Detalles</a> |
+                <form asp-controller="Empresas" asp-action="Empresa">
+                    
+                    <input name="item.Nombre" class="btn btn-success" type="submit" value="Filtrar" />
+                </form>
+                
             </td>
         </tr>
 }
