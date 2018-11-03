@@ -28,7 +28,7 @@ namespace demomvc
             services.AddMvc();
             services.AddDbContext<MvcContext>(options =>
                   //options.UseSqlite("Data Source=MvcMovie.db")
-                  options.UseMySQL("server=localhost;database=db;user=root;password=MySQL;port=3306")
+                  options.UseMySQL("server=localhost;database=db1;user=root;password=MySQL;port=3306")
 
                   );            
         }
