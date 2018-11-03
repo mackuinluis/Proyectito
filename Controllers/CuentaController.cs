@@ -54,7 +54,7 @@ public async Task<IActionResult> Login(string conectado)
 
             if (!String.IsNullOrEmpty(conectado))
             {
-                usuarios = usuarios.Where(u => u.Usu.Contains(conectado));
+                usuarios = usuarios.Where(u => u.Usu.Equals(conectado));
                 Conservar(conectado);
                 return RedirectToAction("Perfil");
             }
