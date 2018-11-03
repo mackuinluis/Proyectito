@@ -7,7 +7,32 @@
                <h1> @Html.DisplayFor(modelItem => item.Usu) </h1>
             
 }
-<h4>Añadir Un Roles</h4>
+<br><br><br>
+@foreach (var item in Model) {
+        
+               <h3> @Html.DisplayFor(modelItem => item.Nombre) </h3>
+            
+}
+<br>
+@foreach (var item in Model) {
+        
+               <h3> @Html.DisplayFor(modelItem => item.Apellidos) </h3>
+            
+}
+<br>
+@foreach (var item in Model) {
+        
+               <h3> @Html.DisplayFor(modelItem => item.Correo) </h3>
+            
+}
+<br>
+@foreach (var item in Model) {
+        
+               <h3> @Html.DisplayFor(modelItem => item.Celular) </h3>
+            
+}
+<br><br><br>
+<h4>Añadir Un Roles: </h4>
 <br>
 <div class="row">
     <div class="col-md-4">
