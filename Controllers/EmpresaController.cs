@@ -57,14 +57,27 @@ namespace demomvc.Controllers
             
             return View(await empresas.ToListAsync());
         }
-         public async Task<IActionResult> Empresa(string a)
+         public async Task<IActionResult> Empresa(string gerente)
         {
-             var empresas = from q in _context.Empresa
-                 select q;
+             var empresas = from m in _context.Empresa
+                 select m;
 
-            if (!String.IsNullOrEmpty(a))
+            
+                empresas= empresas.Where(e => e.Gerente.Equals(gerente));
+                
+           
+            
+            return View(await empresas.ToListAsync());
+        }
+        public async Task<IActionResult> VerEmpresa(string gerente)
+        {
+             var empresas = from m in _context.Empresa
+                 select m;
+
+            if (!String.IsNullOrEmpty(gerente))
             {
-                empresas = empresas.Where(e => e.Nombre.Contains(a));
+                empresas = empresas.Where(e => e.Gerente.Equals(gerente));
+                
                 return RedirectToAction("Empresa");
             }
             

@@ -103,7 +103,7 @@ public async Task<IActionResult> Login(string conectado)
         }
         public IActionResult Empresa()
         {
-            return RedirectToAction("Empresa", "Empresas");
+            return RedirectToAction("VerEmpresa", "Empresas");
         }
     }
 }
