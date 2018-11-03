@@ -2,6 +2,8 @@
 
 @model IEnumerable<demomvc.Models.Usuario>
 
+    <img src="~/images/usuario.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400" height="300">
+
 @foreach (var item in Model) {
         
                <h1> @Html.DisplayFor(modelItem => item.Usu) </h1>
@@ -10,40 +12,47 @@
 <br><br><br>
 @foreach (var item in Model) {
         
-               <h3> @Html.DisplayFor(modelItem => item.Nombre) </h3>
+               <h3> Nommbre: @Html.DisplayFor(modelItem => item.Nombre) </h3>
             
 }
 <br>
 @foreach (var item in Model) {
         
-               <h3> @Html.DisplayFor(modelItem => item.Apellidos) </h3>
+               <h3> Apellidos: @Html.DisplayFor(modelItem => item.Apellidos) </h3>
             
 }
 <br>
 @foreach (var item in Model) {
         
-               <h3> @Html.DisplayFor(modelItem => item.Correo) </h3>
+               <h3> Correo: @Html.DisplayFor(modelItem => item.Correo) </h3>
             
 }
 <br>
 @foreach (var item in Model) {
         
-               <h3> @Html.DisplayFor(modelItem => item.Celular) </h3>
+               <h3>  Celular: @Html.DisplayFor(modelItem => item.Celular) </h3>
             
 }
 <br><br><br>
-<h4>Añadir Un Roles: </h4>
+
 <br>
 <div class="row">
     <div class="col-md-4">
+        <h4>Añadir Un Rol: </h4>
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="Conductor">Conductor</a></div>
     </div>
     <div class="col-md-4">
+        <h4>Empresa: </h4>
+        
+        <a class="btn btn-primary" href="CrearEmpresa">CREAR EMPRESA</a>
+        <a class="btn btn-primary" href="Empresa">VER EMPRESA</a>
         
     </div>
     <div class="col-md-4">
         
     </div>
+
+
 
 
 

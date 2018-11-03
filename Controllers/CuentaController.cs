@@ -96,5 +96,14 @@ public async Task<IActionResult> Login(string conectado)
             }
             return View(conductor);
         }
+        
+        public IActionResult CrearEmpresa()
+        {
+            return RedirectToAction("CrearEmpresa", "Empresas");
+        }
+        public IActionResult Empresa()
+        {
+            return RedirectToAction("Empresa", "Empresas");
+        }
     }
 }
