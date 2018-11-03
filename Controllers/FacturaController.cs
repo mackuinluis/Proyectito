@@ -55,7 +55,7 @@ namespace demomvc.Controllers
             }
             return View(factura);
         }
-        public async Task<IActionResult> Facturas(string searchString,string fDestino, int fConductor, int fCarga, string fEstado)
+        public async Task<IActionResult> Facturas(string searchString,string fDestino, string fEstado)
         {
              var facturas = from n in _context.Factura
                  select n;
@@ -67,15 +67,7 @@ namespace demomvc.Controllers
             if (!String.IsNullOrEmpty(fDestino))
             {
                 facturas = facturas.Where(f => f.Destino.Contains(fDestino));
-            }
-            if (!String.IsNullOrEmpty(fDestino))
-            {
-                facturas = facturas.Where(f => f.Destino.Contains(fDestino));
-            }
-            if (!String.IsNullOrEmpty(fDestino))
-            {
-                facturas = facturas.Where(f => f.Destino.Contains(fDestino));
-            }
+            }      
             if (!String.IsNullOrEmpty(fEstado))
             {
                 facturas = facturas.Where(f => f.Estado.Contains(fEstado));

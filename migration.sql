@@ -84,13 +84,13 @@ VALUES (2,"003-0047","ALP-825","F5O-978",01,"Tumbes","05/11/2017","Piura","06/11
 
 INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Correo,ConfirmarCorreo
 ,Celular,Nacimiento) 
-VALUES (2,"Cristopher","Espino","Overhaz","overhaz123","overhaz123","sonok_thp@outlook.es",
+VALUES (1,"Cristopher","Espino","Overhaz","overhaz123","overhaz123","sonok_thp@outlook.es",
 "sonok_thp@outlook.es",953508892,"01/02/1999");
 
 
 INSERT INTO Usuario (ID,Nombre,Apellidos,Usu,Contraseña,ConfirmarContraseña,Correo,ConfirmarCorreo
 ,Celular,Nacimiento) 
-VALUES (2,"Luis Miguel","Saravia","Mackuin","mackuin123","mackuin123","luis_saravia1@usmp.pe",
+VALUES (2,"Luis Miguel","Saravia","mackuin","123","mackuin123","luis_saravia1@usmp.pe",
 "luis_saravia1@usmp.pe",987445874,"04/03/1996");
 
 

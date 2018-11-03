@@ -10,9 +10,10 @@ using System;
 namespace demomvc.Migrations
 {
     [DbContext(typeof(MvcContext))]
-    partial class MvcContextModelSnapshot : ModelSnapshot
+    [Migration("20181103183337_db3")]
+    partial class db3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

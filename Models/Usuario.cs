@@ -24,7 +24,7 @@ namespace demomvc.Models
         public string ConfirmarCorreo { get; set;}
         [Required(ErrorMessage = "Ingrese Celular")]
         public int Celular { get; set; }
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime Nacimiento { get; set; }
+        
+        public string Nacimiento { get; set; }
     }
 }
