@@ -1,6 +1,14 @@
 {
-  "ProjectFilePath": "c:\\Users\\Baneza26\\Desktop\\progra1_v5\\Proyectito\\demomvc.csproj",
+  "ProjectFilePath": "c:\\Users\\Baneza26\\Desktop\\progra1_v6\\Proyectito\\demomvc.csproj",
   "TargetFramework": "netcoreapp2.0",
   "TagHelpers": [],
-  "Configuration": null
+  "Configuration": {
+    "ConfigurationName": "MVC-2.0",
+    "LanguageVersion": "2.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.0"
+      }
+    ]
+  }
 }
