@@ -31,6 +31,12 @@ namespace demomvc.Controllers
             
             return View(await usuarios.ToListAsync());
         }
+        public async Task<IActionResult> Conductores(string searchString)
+        {
+             var conductores = from m in _context.Conductor
+                 select m;
+            return View(await conductores.ToListAsync());
+        }
     }
 }
 

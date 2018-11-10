@@ -55,26 +55,17 @@ namespace demomvc.Controllers
             }
             return View(factura);
         }
-        public async Task<IActionResult> Facturas(string searchString,string fDestino, string fEstado)
+        public async Task<IActionResult> Facturas(string origen,string fDestino, string fEstado)
         {
              var facturas = from n in _context.Factura
                  select n;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                facturas = facturas.Where(f => f.Origen.Contains(searchString));
-            } 
+            if (!String.IsNullOrEmpty(origen))
+            { facturas = facturas.Where(f => f.Origen.Equals(origen)); } 
             if (!String.IsNullOrEmpty(fDestino))
-            {
-                facturas = facturas.Where(f => f.Destino.Contains(fDestino));
-            }      
+            { facturas = facturas.Where(f => f.Destino.Equals(fDestino)); }      
             if (!String.IsNullOrEmpty(fEstado))
-            {
-                facturas = facturas.Where(f => f.Estado.Contains(fEstado));
-            }
-            
-            
-            
+            { facturas = facturas.Where(f => f.Estado.Equals(fEstado)); }
+
             return View(await facturas.ToListAsync());
         }
         

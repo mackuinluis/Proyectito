@@ -13,12 +13,11 @@
 </center>
 
 
-<form asp-controller="Facturas" asp-action="Facturas">
-     Tipo:<select  name="fTipo" >
-                    <option value="Transporte">Transporte</option>
-                    <option value="Carga">Carga</option>
-        </select>
-    <a class="btn btn-danger" href="Facturas">Desfiltrar</a>
+<form asp-controller="Empresas" asp-action="Empresas">
+    Tipo:<input type="text" name="fTipo">
+        <input class="btn btn-success" type="submit" value="Filtrar" />
+        <br>
+    <a class="btn btn-danger" href="Empresas">Desfiltrar</a>
 </form>
         <br><br>
 

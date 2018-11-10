@@ -19,7 +19,9 @@ namespace demomvc.Models
         [Compare(nameof(Contraseña),ErrorMessage = "Contraseña incorrecta")] 
         public string ConfirmarContraseña { get; set;}
         [Required(ErrorMessage = "Ingrese Correo")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Email invalido")]
         public string Correo { get; set; }
+        [DataType(DataType.EmailAddress, ErrorMessage = "Email invalido")]
         [Compare(nameof(Correo),ErrorMessage = "Esta cuenta de correo no existe. Indica una cuenta diferente ")] 
         public string ConfirmarCorreo { get; set;}
         [Required(ErrorMessage = "Ingrese Celular")]

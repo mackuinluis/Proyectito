@@ -52,7 +52,7 @@ namespace demomvc.Controllers
 
             if (!String.IsNullOrEmpty(fTipo))
             {
-                empresas = empresas.Where(e => e.Tipo.Contains(fTipo));
+                empresas = empresas.Where(e => e.Tipo.Equals(fTipo));
             }
             
             return View(await empresas.ToListAsync());

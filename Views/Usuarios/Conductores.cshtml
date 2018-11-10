@@ -1,0 +1,29 @@
+@model IEnumerable<demomvc.Models.Conductor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Usuarios</h2>
+<br><br><br>
+<a class="btn btn-success" href="Usuarios">VER TODOS lOS USUARIOS</a>
+<center>
+<table class="table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>&nbsp;&nbsp;&nbsp;@Html.DisplayNameFor(model => model.Usuario)&nbsp;&nbsp;&nbsp;</th>
+            <th>&nbsp;&nbsp;&nbsp;@Html.DisplayNameFor(model => model.Licencia)&nbsp;&nbsp;&nbsp;</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Usuario)</td>
+            <td>@Html.DisplayFor(modelItem => item.Licencia)</td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+<center>

@@ -1,51 +1,26 @@
 @model IEnumerable<demomvc.Models.Factura>
-@{
-    ViewData["Title"] = "Index"
-
-}
 
 <h2>Facturas</h2>
-
-
-<h4>Dependiendo el rol que cumpla tu usuario dentro de la empresa se visualizaran ciertos botones. </h4>
 <center>
     <a class="btn btn-primary" href="RegistrarFactura">REGISTRAR FACTURA</a>
-    <a class="btn btn-primary" href="ModificarFactura">MODIFICAR FACTURA</a>
-    <a class="btn btn-primary" href="EliminarFactura">ELIMINAR FACTURA</a>
 </center>
 <br><br>
 <div class="row">
 <form asp-controller="Facturas" asp-action="Facturas">
     <div class="col-sm-4">
-        Origen:<input type="text" name="SearchString">
+        Origen:<input type="text" name="origen">
         <input class="btn btn-success" type="submit" value="Filtrar" />
         <br>
         Destino:<input type="text" name="fDestino">
         <input  class="btn btn-success" type="submit" value="Filtrar" />
-        
     </div>
-
-    <div class="col-sm-4">
-<<<<<<< HEAD
-=======
-    
-        Conductor:<input type="text" name="fConductor">
-        <input class="btn btn-success" type="submit" value="Filtrar" />
-        <br>
-        Carga:<input type="text" name="fCarga">
-        <input  class="btn btn-success" type="submit" value="Filtrar" />
-    
-    </div> 
-
     <div class="col-sm-4"<div><div>
->>>>>>> f93b0f6f7d0c22ec01d424fd34eba5713982d634
         Estado:<input type="text" name="fEstado">
         <input class="btn btn-success" type="submit" value="Filtrar" />
         <br>
         <a class="btn btn-danger" href="Facturas">Desfiltrar</a>
     </div> 
     <div class="col-sm-4"></div>
-        
     </div>
 </form>
 </div>
@@ -54,15 +29,9 @@
 <table class="table-responsive table-bordered table-hover">
     <thead >
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ID)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CodigoFactura)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PlacaTracto)
-                </th>
+                <th>@Html.DisplayNameFor(model => model.ID)</th>
+                <th>@Html.DisplayNameFor(model => model.CodigoFactura)</th>
+                <th>@Html.DisplayNameFor(model => model.PlacaTracto)</th>
                 <th>
                     @Html.DisplayNameFor(model => model.PlacaCarreta)
                 </th>
