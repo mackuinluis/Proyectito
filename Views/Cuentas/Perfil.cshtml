@@ -2,8 +2,13 @@
 
 @model IEnumerable<demomvc.Models.Usuario>
 
-    <img src="~/images/usuario.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400" height="300">
 
+
+@foreach (var item in Model) {
+        
+               <img src="~/images/usuario.jpg" border="1" alt="Este es el ejemplo de un texto alternativo" width="400" height="300">
+            
+}
 @foreach (var item in Model) {
         
                <h1> @Html.DisplayFor(modelItem => item.Usu) </h1>
@@ -35,8 +40,9 @@
 }
 <br><br><br>
 
-<br>
-<div class="row">
+@foreach (var item in Model) {
+        
+               <div class="row">
     <div class="col-md-4">
         <h4>Añadir Un Rol: </h4>
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="Conductor">Conductor</a></div>
@@ -51,6 +57,9 @@
     <div class="col-md-4">
         
     </div>
+            
+}
+<br>
 
 
 
