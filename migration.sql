@@ -120,5 +120,39 @@ INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo)
 VALUES (4,"Cristina Frend",65544,"ErssO SA","Psje. Las Cantulias 222",985620015,965112,
 "Transporte");
 
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (5,"Darelis Perez",98568,"Transp S.A.C","Av. Las Morelias 100"
+,956502112,458544,
+"Transporte");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (6,"Carlos Slak",45412,"Carga Hnos. ","Calle Los Sajiros 123"
+,985454124,547544,
+"Carga");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (7,"Juan Chavez",84547,"Esparza S.A.C","Psje. Los Pinos 147"
+,958745412,124574,
+"Carga");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (8,"Oscar Reyes",84574,"Transporte ASOCIADOS","Calle Las Lilas 741"
+,957447845,145412,
+"Transporte");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (9,"Fred Duarte",454545,"Cargados S.A.C","Calle Los Suspiros 154"
+,956210325,652123,
+"Carga");
+
+INSERT INTO Empresa (ID,Gerente,RUC,Nombre,Direccion,Celular,Telefono,Tipo) 
+VALUES (10,"Carla Ruzzo",94784,"Olivos Trsp","Calle Los Sauces 156"
+,978456123,945784,
+"Transporte");
+
+
+
+
+
 
 
